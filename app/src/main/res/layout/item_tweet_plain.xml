@@ -46,15 +46,4 @@
         android:text="TextView"
         android:textAppearance="@android:style/TextAppearance.Medium" />
 
-    <ImageView
-        android:id="@+id/ivMedia"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_alignLeft="@+id/tvBody"
-        android:layout_below="@+id/tvBody"
-        android:layout_centerHorizontal="true"
-        android:scaleType="centerCrop"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="5dp"
-        app:srcCompat="@android:color/transparent" />
 </RelativeLayout>
