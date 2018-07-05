@@ -35,6 +35,7 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/tvUserName"
         android:text="TextView"
+        android:autoLink="all"
         android:textAppearance="@android:style/TextAppearance.Medium" />
 
     <TextView
@@ -65,7 +66,8 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/ivReply"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/ic_vector_retweet_stroke" />
+        app:srcCompat="@drawable/ic_vector_retweet_stroke"
+        android:tint="@color/medium_gray_50"/>
 
     <ImageView
         android:id="@+id/ivFavorite"
@@ -74,7 +76,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/ivRetweet"
         android:layout_marginEnd="77dp"
-        app:srcCompat="@drawable/ic_vector_heart_stroke" />
+        app:srcCompat="@drawable/ic_vector_heart_stroke"
+        android:tint="@color/medium_gray_50"/>
 
     <ImageView
         android:id="@+id/ivReply"
@@ -83,7 +86,8 @@
         android:layout_alignStart="@+id/tvUserName"
         android:layout_below="@+id/ivMedia"
         android:layout_marginBottom="10dp"
-        app:srcCompat="@drawable/ic_vector_compose_dm" />
+        app:srcCompat="@drawable/ic_vector_compose_dm"
+        android:tint="@color/medium_gray_50"/>
 
     <TextView
         android:id="@+id/tvScreenName"
@@ -104,7 +108,8 @@
         android:gravity="top"
         android:layout_marginStart="-77dp"
         android:layout_toEndOf="@+id/ivFavorite"
-        android:text="###" />
+        android:text="###"
+        android:tint="@color/medium_gray_50"/>
 
     <TextView
         android:id="@+id/tvRetweetCount"
@@ -112,6 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/ivRetweet"
         android:layout_toEndOf="@+id/ivRetweet"
-        android:text="###" />
+        android:text="###"
+        android:tint="@color/medium_gray_50"/>
 
 </RelativeLayout>
