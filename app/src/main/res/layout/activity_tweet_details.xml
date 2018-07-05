@@ -97,7 +97,6 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/tvUserName"
             android:layout_below="@+id/tvUserName"
-            android:layout_marginTop="5dp"
             android:text="TextView"
             android:textAppearance="@android:style/TextAppearance.Medium" />
     </RelativeLayout>
