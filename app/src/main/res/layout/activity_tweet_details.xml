@@ -1,63 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TweetDetailsActivity">
 
-    <ImageView
-        android:id="@+id/ivProfileImage"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
-        app:srcCompat="@drawable/ic_vector_person" />
-
-    <TextView
-        android:id="@+id/tvUserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/ivProfileImage"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        android:textStyle="bold"
-        android:textAppearance="@android:style/TextAppearance.Medium" />
-
-    <TextView
-        android:id="@+id/tvBody"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/ivProfileImage"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="TextView"
-        android:textAppearance="@android:style/TextAppearance.Large" />
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            app:srcCompat="@drawable/ic_vector_person" />
 
-    <ImageView
-        android:id="@+id/ivMedia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/ivProfileImage"
-        android:layout_below="@+id/tvBody"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        app:srcCompat="@drawable/ic_vector_photo" />
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/ivProfileImage"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            android:textStyle="bold"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
 
-    <TextView
-        android:id="@+id/tvCreatedAt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/ivProfileImage"
-        android:layout_below="@+id/ivMedia"
-        android:layout_marginRight="10dp"
-        android:text="TextView" />
+        <TextView
+            android:id="@+id/tvBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/ivProfileImage"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="TextView"
+            android:textAppearance="@android:style/TextAppearance.Large" />
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/ivMedia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ivProfileImage"
+            android:layout_below="@+id/tvBody"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/ic_vector_photo" />
+
+        <TextView
+            android:id="@+id/tvCreatedAt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ivProfileImage"
+            android:layout_below="@+id/ivMedia"
+            android:layout_marginRight="10dp"
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/ivReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvCreatedAt"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="77dp"
+            app:srcCompat="@drawable/ic_vector_compose_dm" />
+
+        <ImageView
+            android:id="@+id/ivRetweet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCreatedAt"
+            android:layout_alignTop="@+id/ivReply"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/ic_vector_retweet_stroke" />
+
+        <ImageView
+            android:id="@+id/ivFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/ivRetweet"
+            android:layout_marginEnd="77dp"
+            app:srcCompat="@drawable/ic_vector_heart_stroke" />
+
+        <TextView
+            android:id="@+id/tvScreenName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvUserName"
+            android:layout_below="@+id/tvUserName"
+            android:layout_marginTop="5dp"
+            android:text="TextView"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+    </RelativeLayout>
+</ScrollView>
