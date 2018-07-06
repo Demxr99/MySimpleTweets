@@ -38,4 +38,14 @@
             android:layout_height="wrap_content" />
     </android.support.design.widget.TextInputLayout>
 
+    <ImageView
+        android:id="@+id/ivCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnTweet"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:tint="@color/twitter_blue"
+        app:srcCompat="@drawable/ic_vector_close" />
+
 </RelativeLayout>
