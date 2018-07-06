@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/ivReply"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/ic_vector_retweet_stroke"
+        app:srcCompat="@drawable/ic_vector_retweet"
         android:tint="@color/medium_gray_50"/>
 
     <ImageView
