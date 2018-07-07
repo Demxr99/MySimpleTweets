@@ -106,6 +106,7 @@
         android:layout_toEndOf="@+id/tvUserName"
         android:layout_marginLeft="5dp"
         android:text="TextView"
+        android:textColor="@color/medium_gray"
         android:textAppearance="@android:style/TextAppearance.Medium" />
 
 </RelativeLayout>

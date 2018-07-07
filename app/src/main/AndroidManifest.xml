@@ -38,7 +38,9 @@
         <activity android:name=".TimelineActivity" />
         <activity android:name=".ComposeActivity" />
         <activity android:name=".TweetDetailsActivity" />
-        <activity android:name=".TweetDetailsPlainActivity"></activity>
+        <activity android:name=".TweetDetailsPlainActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".FollowersActivity"></activity>
     </application>
 
 </manifest>

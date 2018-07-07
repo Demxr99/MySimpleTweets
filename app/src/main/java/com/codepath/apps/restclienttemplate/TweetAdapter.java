@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.request.RequestOptions;
 import com.codepath.apps.restclienttemplate.models.Tweet;
+import com.codepath.apps.restclienttemplate.models.User;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.json.JSONException;
@@ -99,12 +100,14 @@ public class TweetAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
                 vh1.ivRetweet.setImageResource(R.drawable.ic_vector_retweet_stroke);
             }
 
+            // set profile image
             GlideApp.with(context)
                     .load(tweet.user.profileImageUrl)
                     .placeholder(R.drawable.ic_vector_photo)
                     .apply(RequestOptions.circleCropTransform())
                     .into(vh1.ivProfileImage);
 
+            // set media image
             // TODO -fix rounded corners
             GlideApp.with(context)
                     .load(tweet.media)
@@ -180,6 +183,23 @@ public class TweetAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
             super(itemView);
             // resolve view objects
             ButterKnife.bind(this, itemView);
+        }
+
+        @OnClick(R.id.ivProfileImage)
+        public void viewProfile(ImageView v){
+            // gets position of item in ArrayList
+            int position = getAdapterPosition();
+            // check if position is valid
+            if (position != RecyclerView.NO_POSITION) {
+                // get the tweet at position
+                Tweet tweet = mTweets.get(position);
+                // get user that tweeted
+                User user = tweet.user;
+                // create intent to new activity
+                Intent intent = new Intent(context, ProfileActivity.class);
+                intent.putExtra(User.class.getSimpleName(), Parcels.wrap(user));
+                context.startActivity(intent);
+            }
         }
 
         @OnClick(R.id.ivReply)
@@ -347,6 +367,23 @@ public class TweetAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
             ButterKnife.bind(this, itemView);
 
             itemView.setOnClickListener(this);
+        }
+
+        @OnClick(R.id.ivProfileImage)
+        public void viewProfile(ImageView v){
+            // gets position of item in ArrayList
+            int position = getAdapterPosition();
+            // check if position is valid
+            if (position != RecyclerView.NO_POSITION) {
+                // get the tweet at position
+                Tweet tweet = mTweets.get(position);
+                // get user that tweeted
+                User user = tweet.user;
+                // create intent to new activity
+                Intent intent = new Intent(context, ProfileActivity.class);
+                intent.putExtra(User.class.getSimpleName(), Parcels.wrap(user));
+                context.startActivity(intent);
+            }
         }
 
         @OnClick(R.id.ivReply)

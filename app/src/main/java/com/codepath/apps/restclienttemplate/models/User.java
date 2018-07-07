@@ -12,6 +12,7 @@ public class User {
     public long uid;
     public String screenName;
     public String profileImageUrl;
+    public String description;
 
     // default no-arg constructor
     public User(){}
@@ -25,6 +26,7 @@ public class User {
         user.uid = json.getLong("id");
         user.screenName = json.getString("screen_name");
         user.profileImageUrl = json.getString("profile_image_url");
+        user.description = json.getString("description");
 
         return user;
     }
