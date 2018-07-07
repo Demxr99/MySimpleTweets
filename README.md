@@ -47,11 +47,11 @@ The following **bonus** features are implemented:
 The following **additional** features are implemented:
 
 * [x] List anything else that you can get done to improve the app functionality!
-When replying to a tweet, automatically place the cursor at the end of the twitter handle
-When character count is over the limit, Tweet button does nothing in compose activity.
-Shows the number of retweets and favorites each tweet has in timeline as well as detail view. Updates these numbers if you retweet/undo retweet or favorite/unfavorite.
-User can now press the profile photos from tweets and go to the profile of the tweeter. A list of the tweeters tweets are shown as well as the number of followers, and people they are following.
-Added cancel button to compose tweet.
+- When replying to a tweet, automatically place the cursor at the end of the twitter handle.
+- When character count is over the limit, Tweet button does nothing in compose activity.
+- Shows the number of retweets and favorites each tweet has in timeline as well as detail view. Updates these numbers if you retweet/undo retweet or favorite/unfavorite.
+- User can now press the profile photos from tweets and go to the profile of the tweeter. A list of the tweeter's tweets are shown.
+- Added cancel button to compose tweet.
 
 ## Video Walkthrough
 
