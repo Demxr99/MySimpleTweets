@@ -165,7 +165,7 @@ public class ProfileActivity extends Activity {
     }
 
     private void populateTimeline(){
-        client.getHomeTimeline(maxID, new JsonHttpResponseHandler(){
+        client.getUserTimeline(maxID, user.uid, new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 Log.d("TwitterClient refresh here", response.toString());
